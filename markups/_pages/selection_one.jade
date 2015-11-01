@@ -1,0 +1,58 @@
+extends ../main
+block title
+    | Отделы
+block additional_button
+    a.addscene.greenbtn(href='javascript:;', role='button') Добавить сайт
+block content
+    .filter
+        input.fln(type='text', placeholder='Быстрый поиск по названию')
+    .table.widjet_table.thead
+        .trow.throw
+            .tcol.tcol_1 Сайт
+            .tcol.tcol_3 Доступные действия
+    .table.widjet_table.tbody
+        .trow
+            .tcol.tcol_1
+                a.script_table_site(href='javascript:;', role='button', target='_blank') Московский
+
+            .tcol.tcol_3
+                .drop-block
+                    button.lines-button.x(type='button', aria-label='Toggle Navigation')
+                        span.lines
+                    ul.dropmenu
+                        li
+                            a(href='javascript:;', role='button') Редактировать
+                        li
+                            a(href='javascript:;', role='button') Остановить
+                        li
+                            a(href='javascript:;', role='button') Удалить
+        .trow
+            .tcol.tcol_1
+                a.script_table_site(href='javascript:;', role='button', target='_blank') Московский
+
+            .tcol.tcol_3
+                .drop-block
+                    button.lines-button.x(type='button', aria-label='Toggle Navigation')
+                        span.lines
+                    ul.dropmenu
+                        li
+                            a(href='javascript:;', role='button') Редактировать
+                        li
+                            a(href='javascript:;', role='button') Остановить
+                        li
+                            a(href='javascript:;', role='button') Удалить
+        .trow
+            .tcol.tcol_1
+                a.script_table_site(href='javascript:;', role='button', target='_blank') Московский
+
+            .tcol.tcol_3
+                .drop-block
+                    button.lines-button.x(type='button', aria-label='Toggle Navigation')
+                        span.lines
+                    ul.dropmenu
+                        li
+                            a(href='javascript:;', role='button') Редактировать
+                        li
+                            a(href='javascript:;', role='button') Остановить
+                        li
+                            a(href='javascript:;', role='button') Удалить
