@@ -2,19 +2,44 @@ extends ../main
 block title
     | Сотрудники
 block additional_button
-    a.addscene.greenbtn(href='javascript:;', role='button') Добавить сотрудника
+    a.addscene.greenbtn.addscene__set(href='javascript:;', role='button') Добавить сотрудника
 block content
     .filter
-        input.fln(type='text', placeholder='Быстрый поиск по названию')
-    .table.widjet_table.thead
-        .trow.throw
-            .tcol.tcol_1 Сайт
-            .tcol.tcol_3 Доступные действия
-    .table.widjet_table.tbody
-        .trow
-            .tcol.tcol_1
-                a.script_table_site(href='javascript:;', role='button', target='_blank') Московский
+        input.fln.fln_set(type='text', placeholder='Быстрый поиск по названию')
+        .wrap_for_sel
+            .col.m3.s6.col_set
+                select.dropdown(tabindex='5')
+                    option.label Все сайты
+                    option(value='1') Все сайты
+                    option(value='2') Все сайты
+            .col.m6.s6.col_set
+                select.dropdown(tabindex='5')
+                    option.label Все отделы
+                    option(value='1') Все отделы
+                    option(value='2') Все отделы
 
+    .table.widjet_table.tbody.tbody-nbb
+        .tbody__inner-wrapp
+            .form_row_checkbox.form_row_checkbox_set(tabindex='5')
+                input#distribute1.filled-in(type='checkbox')
+                label(for='distribute1') Выбраны 5 из 8
+            .col.m6.s6.col_set
+                select.dropdown(tabindex='5')
+                    option.label Все отделы
+                    option(value='1') Все отделы
+                    option(value='2') Все отделы
+    .table.widjet_table.tbody.tbody-nbt
+        .trow
+            .tcol.tcol_1.tcol_1-set
+                .form_row_checkbox(tabindex='5')
+                    input#distribute2.filled-in(type='checkbox')
+                    label(for='distribute2')
+                    span.img-block
+                        img.img-circle.img-circle_set(src='image/helen.jpg', alt='')
+            .tcol.tcol_2
+                span.status Елена
+                span.status ezz@mail.ru
+                span.status +79214567788
             .tcol.tcol_3
                 .drop-block
                     button.lines-button.x(type='button', aria-label='Toggle Navigation')
@@ -28,8 +53,15 @@ block content
                             a(href='javascript:;', role='button') Удалить
         .trow
             .tcol.tcol_1
-                a.script_table_site(href='javascript:;', role='button', target='_blank') Московский
-
+                .form_row_checkbox(tabindex='5')
+                    input#distribute2.filled-in(type='checkbox')
+                    label(for='distribute2')
+                    span.img-block
+                        img.img-circle.img-circle_set(src='image/helen.jpg', alt='')
+            .tcol.tcol_2
+                span.status Елена
+                span.status ezz@mail.ru
+                span.status +79214567788
             .tcol.tcol_3
                 .drop-block
                     button.lines-button.x(type='button', aria-label='Toggle Navigation')
@@ -43,8 +75,15 @@ block content
                             a(href='javascript:;', role='button') Удалить
         .trow
             .tcol.tcol_1
-                a.script_table_site(href='javascript:;', role='button', target='_blank') Московский
-
+                .form_row_checkbox(tabindex='5')
+                    input#distribute2.filled-in(type='checkbox')
+                    label(for='distribute2')
+                    span.img-block
+                        img.img-circle.img-circle_set(src='image/helen.jpg', alt='')
+            .tcol.tcol_2
+                span.status Елена
+                span.status ezz@mail.ru
+                span.status +79214567788
             .tcol.tcol_3
                 .drop-block
                     button.lines-button.x(type='button', aria-label='Toggle Navigation')

@@ -2,11 +2,12 @@
 <html lang="ru">
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300&subset=latin,cyrillic" rel="stylesheet" type="text/css">
-		<link type="text/css" rel="stylesheet" href="css/style.css"/>
-		<title>Сотрудники</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
+		<link type="text/css" rel="stylesheet" href="css/style.css">
+		<link type="text/css" rel="stylesheet" href="css/main.css">
 	</head>
+	<title>Сотрудники</title>
 	<body>
 		<div class="header">
 			<div class="container">
@@ -95,20 +96,51 @@
 			<div class="container content_container">
 				<div class="row">
 					<div class="subject">
-						<h1>Сотрудники</h1><a href="javascript:;" role="button" class="addscene greenbtn">Добавить сотрудника</a><a href="javascript:;" role="button" class="playreview whitebtn">Посмотреть видео-обзор раздела</a>
+						<h1>Сотрудники</h1><a href="javascript:;" role="button" class="addscene greenbtn addscene__set">Добавить сотрудника</a><a href="javascript:;" role="button" class="playreview whitebtn">Посмотреть видео-обзор раздела</a>
 					</div>
 					<div class="filter">
-						<input type="text" placeholder="Быстрый поиск по названию" class="fln">
-					</div>
-					<div class="table widjet_table thead">
-						<div class="trow throw">
-							<div class="tcol tcol_1">Сайт</div>
-							<div class="tcol tcol_3">Доступные действия</div>
+						<input type="text" placeholder="Быстрый поиск по названию" class="fln fln_set">
+						<div class="wrap_for_sel">
+							<div class="col m3 s6 col_set">
+								<select tabindex="5" class="dropdown">
+									<option class="label">Все сайты</option>
+									<option value="1">Все сайты</option>
+									<option value="2">Все сайты</option>
+								</select>
+							</div>
+							<div class="col m6 s6 col_set">
+								<select tabindex="5" class="dropdown">
+									<option class="label">Все отделы</option>
+									<option value="1">Все отделы</option>
+									<option value="2">Все отделы</option>
+								</select>
+							</div>
 						</div>
 					</div>
-					<div class="table widjet_table tbody">
+					<div class="table widjet_table tbody tbody-nbb">
+						<div class="tbody__inner-wrapp">
+							<div tabindex="5" class="form_row_checkbox form_row_checkbox_set">
+								<input id="distribute1" type="checkbox" class="filled-in">
+								<label for="distribute1">Выбраны 5 из 8</label>
+							</div>
+							<div class="col m6 s6 col_set">
+								<select tabindex="5" class="dropdown">
+									<option class="label">Все отделы</option>
+									<option value="1">Все отделы</option>
+									<option value="2">Все отделы</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="table widjet_table tbody tbody-nbt">
 						<div class="trow">
-							<div class="tcol tcol_1"><a href="javascript:;" role="button" target="_blank" class="script_table_site">Московский</a></div>
+							<div class="tcol tcol_1 tcol_1-set">
+								<div tabindex="5" class="form_row_checkbox">
+									<input id="distribute2" type="checkbox" class="filled-in">
+									<label for="distribute2"></label><span class="img-block"><img src="image/helen.jpg" alt="" class="img-circle img-circle_set"></span>
+								</div>
+							</div>
+							<div class="tcol tcol_2"><span class="status">Елена</span><span class="status">ezz@mail.ru</span><span class="status">+79214567788</span></div>
 							<div class="tcol tcol_3">
 								<div class="drop-block">
 									<button type="button" aria-label="Toggle Navigation" class="lines-button x"><span class="lines"></span></button>
@@ -121,7 +153,13 @@
 							</div>
 						</div>
 						<div class="trow">
-							<div class="tcol tcol_1"><a href="javascript:;" role="button" target="_blank" class="script_table_site">Московский</a></div>
+							<div class="tcol tcol_1">
+								<div tabindex="5" class="form_row_checkbox">
+									<input id="distribute2" type="checkbox" class="filled-in">
+									<label for="distribute2"></label><span class="img-block"><img src="image/helen.jpg" alt="" class="img-circle img-circle_set"></span>
+								</div>
+							</div>
+							<div class="tcol tcol_2"><span class="status">Елена</span><span class="status">ezz@mail.ru</span><span class="status">+79214567788</span></div>
 							<div class="tcol tcol_3">
 								<div class="drop-block">
 									<button type="button" aria-label="Toggle Navigation" class="lines-button x"><span class="lines"></span></button>
@@ -134,7 +172,13 @@
 							</div>
 						</div>
 						<div class="trow">
-							<div class="tcol tcol_1"><a href="javascript:;" role="button" target="_blank" class="script_table_site">Московский</a></div>
+							<div class="tcol tcol_1">
+								<div tabindex="5" class="form_row_checkbox">
+									<input id="distribute2" type="checkbox" class="filled-in">
+									<label for="distribute2"></label><span class="img-block"><img src="image/helen.jpg" alt="" class="img-circle img-circle_set"></span>
+								</div>
+							</div>
+							<div class="tcol tcol_2"><span class="status">Елена</span><span class="status">ezz@mail.ru</span><span class="status">+79214567788</span></div>
 							<div class="tcol tcol_3">
 								<div class="drop-block">
 									<button type="button" aria-label="Toggle Navigation" class="lines-button x"><span class="lines"></span></button>
