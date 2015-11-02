@@ -109,7 +109,14 @@
 }
 
 .add-emp_set {
+  float: left;
+  margin-left: -250px !important;
   max-width: 620px;
+}
+
+.goleft {
+  position: relative;
+  margin-left: -170px !important;
 }
 
 .tell_set {
