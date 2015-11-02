@@ -32,7 +32,8 @@
 }
 
 .col_set {
-  width: 180px !important;
+  width: 205px !important;
+  margin-right: 20px;
 }
 
 .tbody__inner-wrapp {
@@ -92,7 +93,7 @@
 
 .time-select {
   margin-bottom: 15px;
-  width: 290px;
+  width: 250px;
 }
 
 .modal-select {
@@ -101,6 +102,59 @@
 
 .add-emp_set {
   max-width: 620px;
+}
+
+.tell_set {
+  margin-right: 20px;
+  margin-bottom: 20px;
+  width: 205px !important;
+  margin-left: 0 !important;
+}
+.tell_set .url-block {
+  margin-left: 0 !important;
+}
+
+.tell_input {
+  margin-right: 0 !important;
+  margin-bottom: 5px;
+  margin-left: 0 !important;
+}
+
+.dop_tell {
+  display: inline-block;
+}
+
+.wrapp_set_down {
+  padding-top: 5px;
+  position: relative;
+  width: 100%;
+}
+
+.add-pick__pick {
+  display: block;
+  width: 105px;
+  height: 105px;
+  background: url("../image/helen-big.jpg") no-repeat center;
+}
+
+.add-pick__text_down {
+  display: inline-block;
+  position: absolute;
+  top: 37%;
+  left: 115px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.add-pick__text_down .pick__text_down_inner {
+  color: #6c6c6c;
+  text-decoration: none;
+  cursor: pointer;
+  border-bottom: 1px dashed;
+}
+
+.add-pick__text_down .pick__text_down_inner:hover {
+  border-bottom: 1px solid;
 }
 
 /* --------- media queries --------- */
@@ -113,7 +167,16 @@
     margin-bottom: 50px !important;
     margin-right: 50px !important;
   }
-}
-.addscene__set {
-  width: 240px !important;
+
+  .addscene__set {
+    width: 240px !important;
+  }
+
+  .col_set {
+    width: 175px !important;
+    margin-right: 20px;
+  }
+  .col_set .dropdown {
+    width: 175px !important;
+  }
 }

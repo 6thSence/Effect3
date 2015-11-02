@@ -4,10 +4,14 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="ui/jquery-ui.css">
+		<link rel="stylesheet" type="text/css" href="ui/jquery-ui.structure.css">
+		<link rel="stylesheet" type="text/css" href="ui/jquery-ui.theme.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery.rating.css">
 		<link type="text/css" rel="stylesheet" href="css/style.css">
 		<link type="text/css" rel="stylesheet" href="css/main.css">
 	</head>
-	<title>Добавить отдел</title>
+	<title>Добавить сотрудника</title>
 	<body>
 		<div class="header">
 			<div class="container">
@@ -96,59 +100,85 @@
 			<div class="container content_container">
 				<div class="row">
 					<div class="subject">
-						<h1>Добавить отдел</h1><a href="javascript:;" role="button" class="playreview whitebtn">Посмотреть видео-обзор раздела</a>
+						<h1>Добавить сотрудника</h1><a href="javascript:;" role="button" class="playreview whitebtn">Посмотреть видео-обзор раздела</a>
 					</div>
 					<div class="filter">
 						<input type="text" placeholder="Быстрый поиск по названию" class="fln">
 					</div>
-					<div class="table widjet_table thead">
-						<div class="trow throw">
-							<div class="tcol tcol_1">Сайт</div>
-							<div class="tcol tcol_2">Cтатус</div>
-							<div class="tcol tcol_3">Доступные действия</div>
-						</div>
-					</div>
-					<div class="table widjet_table tbody">
-						<div class="trow">
-							<div class="tcol tcol_1"><a href="javascript:;" role="button" target="_blank" class="script_table_site">www.gazpromcompany.ru</a></div>
-							<div class="tcol tcol_2"><span class="status on">Установлен</span><span class="test">Проверить установку</span></div>
-							<div class="tcol tcol_3">
-								<div class="drop-block">
-									<button type="button" aria-label="Toggle Navigation" class="lines-button x"><span class="lines"></span></button>
-									<ul class="dropmenu">
-										<li><a href="javascript:;" role="button">Редактировать</a></li>
-										<li><a href="javascript:;" role="button">Остановить</a></li>
-										<li><a href="javascript:;" role="button">Удалить</a></li>
-									</ul>
+					<div class="table widjet_table tbody widjet_table_set">
+						<form class="form_set2">
+							<div class="form_row form_row_heig">
+								<div class="row">
+									<div class="wrapp_set_down">
+										<div class="add-pick__pick"></div>
+									</div>
+									<p class="add-pick__text_down"><a href="#" class="pick__text_down_inner">Загрузить фото</a></p>
+								</div>
+								<div class="row">
+									<div class="col l4 m4 s12">
+										<input type="url" placeholder="Имя" class="time-select">
+										<input type="url" placeholder="Фамилия" class="time-select">
+									</div>
+									<div class="col l4 m4 s12">
+										<input type="url" placeholder="E-mail сотрудника" class="time-select">
+										<input type="url" placeholder="Пароль" class="time-select">
+										<!--span.descrerr Пример ошибки-->
+									</div>
+								</div>
+								<p class="h3">Выберите часовой пояс</p>
+								<div class="row row_heig">
+									<div class="col m4 s6 time-select_set tell_set">
+										<select tabindex="5" class="dropdown">
+											<option class="label">Россия</option>
+											<option value="1">Россия</option>
+											<option value="2">Россия</option>
+										</select>
+									</div>
+									<div class="col m4 s6 time-select_set tell_set">
+										<select tabindex="5" class="dropdown">
+											<option class="label">UTC+3.00-Москва</option>
+											<option value="1">UTC+4.00-Москва</option>
+											<option value="2">UTC+5.00-Москва</option>
+										</select>
+									</div>
+									<div class="col l4 m4 s12 time-select_set tell_set">
+										<div class="url-block">
+											<input type="tel" placeholder="+7(___)-___-__-__" tabindex="5" class="seeend tell_input">
+										</div>
+									</div>
+									<div class="col l4 m4 s12 time-select_set tell_set">
+										<div class="url-block">
+											<input type="tel" placeholder="" tabindex="5" class="seeend tell_input">
+											<label class="dop_tell"><span>Доп. номер</span></label>
+										</div>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="trow">
-							<div class="tcol tcol_1"><a href="javascript:;" role="button" target="_blank" class="script_table_site">www.gazpromcompany.ru</a></div>
-							<div class="tcol tcol_2"><span class="status on">Установлен</span><span class="test">Проверить установку</span></div>
-							<div class="tcol tcol_3">
-								<div class="drop-block">
-									<button type="button" aria-label="Toggle Navigation" class="lines-button x"><span class="lines"></span></button>
-									<ul class="dropmenu">
-										<li><a href="javascript:;" role="button">Редактировать</a></li>
-										<li><a href="javascript:;" role="button">Остановить</a></li>
-									</ul>
+							<div class="form_row">
+								<div class="form_row">
+									<p class="h3">Дополнительные настройки</p>
+									<div tabindex="5" class="form_row_checkbox">
+										<input id="dop1" type="checkbox" tabindex="5" class="filled-in">
+										<label for="dop1">Может принимать звонки от клиентов</label>
+									</div>
+									<div tabindex="5" class="form_row_checkbox">
+										<input id="dop2" type="checkbox" tabindex="5" class="filled-in">
+										<label for="dop2">Может обращаться в онлайн чате с клиентами</label>
+									</div>
+									<div tabindex="5" class="form_row_checkbox">
+										<input id="dop3" type="checkbox" tabindex="5" class="filled-in">
+										<label for="dop3">Может принимать текстовые запросы от клиентов</label>
+									</div>
 								</div>
-							</div>
-						</div>
-						<div class="trow">
-							<div class="tcol tcol_1"><a href="javascript:;" role="button" target="_blank" class="script_table_site">www.gazpromcompany.ru</a></div>
-							<div class="tcol tcol_2"><span class="status off">Не установлен</span><span class="test">Проверить установку</span></div>
-							<div class="tcol tcol_3">
-								<div class="drop-block">
-									<button type="button" aria-label="Toggle Navigation" class="lines-button x"><span class="lines"></span></button>
-									<ul class="dropmenu">
-										<li><a href="javascript:;" role="button">Редактировать</a></li>
-										<li><a href="javascript:;" role="button">Остановить</a></li>
-									</ul>
+								<p class="h3">Определить в отдел / отделы</p>
+								<div class="form_row">
+									<select id="choise" data-placeholder="Выберите отдел" multiple="" tabindex="-1" class="chosen-select">
+										<option selected="">Технический отдел</option>
+										<option>Отдел продаж</option>
+									</select>
 								</div>
-							</div>
-						</div>
+							</div><a href="javascript:;" role="button" class="btn greenbtn">Сохранить</a>
+						</form>
 					</div>
 				</div>
 			</div>
@@ -188,5 +218,8 @@
 			</div>
 		</div>
 		<script src="js/main.js"></script>
+		<script src="ui/jquery-ui.js"></script>
+		<script src="js/jquery.rating.min.js"></script>
+		<script src="js/addition_second.js"></script>
 	</body>
 </html>

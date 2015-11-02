@@ -1,59 +1,75 @@
 extends ../main
 block title
-    | Добавить отдел
+    | Добавить сотрудника
+block script
+    script(src='ui/jquery-ui.js')
+    script(src='js/jquery.rating.min.js')
+    script(src='js/addition_second.js')
+block link
+    link(rel='stylesheet', type='text/css', href='ui/jquery-ui.css')
+    link(rel='stylesheet', type='text/css', href='ui/jquery-ui.structure.css')
+    link(rel='stylesheet', type='text/css', href='ui/jquery-ui.theme.css')
+    link(rel='stylesheet', type='text/css', href='css/jquery.rating.css')
 block content
     .filter
         input.fln(type='text', placeholder='Быстрый поиск по названию')
-    .table.widjet_table.thead
-        .trow.throw
-            .tcol.tcol_1 Сайт
-            .tcol.tcol_2 Cтатус
-            .tcol.tcol_3 Доступные действия
-    .table.widjet_table.tbody
-        .trow
-            .tcol.tcol_1
-                a.script_table_site(href='javascript:;', role='button', target='_blank') www.gazpromcompany.ru
-            .tcol.tcol_2
-                span.status.on Установлен
-                span.test Проверить установку
-            .tcol.tcol_3
-                .drop-block
-                    button.lines-button.x(type='button', aria-label='Toggle Navigation')
-                        span.lines
-                    ul.dropmenu
-                        li
-                            a(href='javascript:;', role='button') Редактировать
-                        li
-                            a(href='javascript:;', role='button') Остановить
-                        li
-                            a(href='javascript:;', role='button') Удалить
-        .trow
-            .tcol.tcol_1
-                a.script_table_site(href='javascript:;', role='button', target='_blank') www.gazpromcompany.ru
-            .tcol.tcol_2
-                span.status.on Установлен
-                span.test Проверить установку
-            .tcol.tcol_3
-                .drop-block
-                    button.lines-button.x(type='button', aria-label='Toggle Navigation')
-                        span.lines
-                    ul.dropmenu
-                        li
-                            a(href='javascript:;', role='button') Редактировать
-                        li
-                            a(href='javascript:;', role='button') Остановить
-        .trow
-            .tcol.tcol_1
-                a.script_table_site(href='javascript:;', role='button', target='_blank') www.gazpromcompany.ru
-            .tcol.tcol_2
-                span.status.off Не установлен
-                span.test Проверить установку
-            .tcol.tcol_3
-                .drop-block
-                    button.lines-button.x(type='button', aria-label='Toggle Navigation')
-                        span.lines
-                    ul.dropmenu
-                        li
-                            a(href='javascript:;', role='button') Редактировать
-                        li
-                            a(href='javascript:;', role='button') Остановить
+    .table.widjet_table.tbody.widjet_table_set
+        form.form_set2
+
+            .form_row.form_row_heig
+                .row
+                    .wrapp_set_down
+                        .add-pick__pick
+                    p.add-pick__text_down
+                        a.pick__text_down_inner(href='#') Загрузить фото
+                .row
+                    .col.l4.m4.s12
+                        input(type='url', placeholder='Имя').time-select
+                        input(type='url', placeholder='Фамилия').time-select
+                    .col.l4.m4.s12
+                        input(type='url', placeholder='E-mail сотрудника').time-select
+                        input(type='url', placeholder='Пароль').time-select
+                        //span.descrerr Пример ошибки
+                p.h3 Выберите часовой пояс
+                .row.row_heig
+                    .col.m4.s6.time-select_set.tell_set
+                        select.dropdown(tabindex='5')
+                            option.label Россия
+                            option(value='1') Россия
+                            option(value='2') Россия
+                    .col.m4.s6.time-select_set.tell_set
+                        select.dropdown(tabindex='5')
+                            option.label UTC+3.00-Москва
+                            option(value='1') UTC+4.00-Москва
+                            option(value='2') UTC+5.00-Москва
+                    .col.l4.m4.s12.time-select_set.tell_set
+                        .url-block
+                            input.seeend.tell_input(type='tel', placeholder='+7(___)-___-__-__', tabindex='5')
+                    .col.l4.m4.s12.time-select_set.tell_set
+                        .url-block
+                            input.seeend.tell_input(type='tel', placeholder='', tabindex='5')
+                            label.dop_tell
+                                span Доп. номер
+
+            .form_row
+                .form_row
+                    p.h3 Дополнительные настройки
+                    .form_row_checkbox(tabindex='5')
+                        input#dop1.filled-in(type='checkbox', tabindex='5')
+                        label(for='dop1') Может принимать звонки от клиентов
+                    .form_row_checkbox(tabindex='5')
+                        input#dop2.filled-in(type='checkbox', tabindex='5')
+                        label(for='dop2') Может обращаться в онлайн чате с клиентами
+                    .form_row_checkbox(tabindex='5')
+                        input#dop3.filled-in(type='checkbox', tabindex='5')
+                        label(for='dop3') Может принимать текстовые запросы от клиентов
+
+
+
+                p.h3 Определить в отдел / отделы
+                .form_row
+                    select#choise.chosen-select(data-placeholder='Выберите отдел', multiple='', tabindex='-1')
+                        option(selected='') Технический отдел
+                        option Отдел продаж
+            a.btn.greenbtn(href='javascript:;', role='button') Сохранить
+                               
