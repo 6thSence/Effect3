@@ -102,9 +102,6 @@
 					<div class="subject">
 						<h1>Добавить сотрудника</h1><a href="javascript:;" role="button" class="playreview whitebtn">Посмотреть видео-обзор раздела</a>
 					</div>
-					<div class="filter">
-						<input type="text" placeholder="Быстрый поиск по названию" class="fln">
-					</div>
 					<div class="table widjet_table tbody widjet_table_set">
 						<form class="form_set2">
 							<div class="form_row form_row_heig">
@@ -114,15 +111,18 @@
 									</div>
 									<p class="add-pick__text_down"><a href="#" class="pick__text_down_inner">Загрузить фото</a></p>
 								</div>
-								<div class="row">
+								<div class="row row_descrerr">
 									<div class="col l4 m4 s12">
-										<input type="url" placeholder="Имя" class="time-select">
-										<input type="url" placeholder="Фамилия" class="time-select">
+										<input type="url" placeholder="Имя" tabindex="1" class="time-select">
+										<label class="wrerr"><span>Пример ошибки</span></label>
+										<input type="url" placeholder="Фамилия" tabindex="2" class="time-select">
+										<label class="wrerr"><span>Пример ошибки</span></label>
 									</div>
 									<div class="col l4 m4 s12">
-										<input type="url" placeholder="E-mail сотрудника" class="time-select">
-										<input type="url" placeholder="Пароль" class="time-select">
-										<!--span.descrerr Пример ошибки-->
+										<input type="url" placeholder="E-mail сотрудника" tabindex="3" class="time-select">
+										<label class="wrerr"><span>Пример ошибки</span></label>
+										<input type="url" placeholder="Пароль" tabindex="4" class="time-select">
+										<label class="wrerr"><span>Пример ошибки</span></label>
 									</div>
 								</div>
 								<p class="h3">Выберите часовой пояс</p>
@@ -135,7 +135,7 @@
 										</select>
 									</div>
 									<div class="col m4 s6 time-select_set tell_set">
-										<select tabindex="5" class="dropdown">
+										<select tabindex="6" class="dropdown">
 											<option class="label">UTC+3.00-Москва</option>
 											<option value="1">UTC+4.00-Москва</option>
 											<option value="2">UTC+5.00-Москва</option>
@@ -143,12 +143,13 @@
 									</div>
 									<div class="col l4 m4 s12 time-select_set tell_set">
 										<div class="url-block">
-											<input type="tel" placeholder="+7(___)-___-__-__" tabindex="5" class="seeend tell_input">
+											<input type="tel" placeholder="+7(___)-___-__-__" tabindex="7" class="seeend tell_input">
+											<label class="wrerr wrerr-tel"><span>Пример ошибки</span></label>
 										</div>
 									</div>
 									<div class="col l4 m4 s12 time-select_set tell_set">
 										<div class="url-block">
-											<input type="tel" placeholder="" tabindex="5" class="seeend tell_input">
+											<input type="tel" placeholder="" tabindex="8" class="seeend tell_input">
 											<label class="dop_tell"><span>Доп. номер</span></label>
 										</div>
 									</div>
@@ -157,27 +158,28 @@
 							<div class="form_row">
 								<div class="form_row">
 									<p class="h3">Дополнительные настройки</p>
-									<div tabindex="5" class="form_row_checkbox">
-										<input id="dop1" type="checkbox" tabindex="5" class="filled-in">
+									<div tabindex="9" class="form_row_checkbox">
+										<input id="dop1" type="checkbox" tabindex="10" class="filled-in">
 										<label for="dop1">Может принимать звонки от клиентов</label>
 									</div>
-									<div tabindex="5" class="form_row_checkbox">
-										<input id="dop2" type="checkbox" tabindex="5" class="filled-in">
+									<div tabindex="11" class="form_row_checkbox">
+										<input id="dop2" type="checkbox" tabindex="12" class="filled-in">
 										<label for="dop2">Может обращаться в онлайн чате с клиентами</label>
 									</div>
-									<div tabindex="5" class="form_row_checkbox">
-										<input id="dop3" type="checkbox" tabindex="5" class="filled-in">
+									<div tabindex="13" class="form_row_checkbox">
+										<input id="dop3" type="checkbox" tabindex="14" class="filled-in">
 										<label for="dop3">Может принимать текстовые запросы от клиентов</label>
 									</div>
 								</div>
 								<p class="h3">Определить в отдел / отделы</p>
 								<div class="form_row">
-									<select id="choise" data-placeholder="Выберите отдел" multiple="" tabindex="-1" class="chosen-select">
+									<select id="choise" data-placeholder="Выберите отдел" multiple="" tabindex="15" class="chosen-select">
 										<option selected="">Технический отдел</option>
 										<option>Отдел продаж</option>
 									</select>
+									<label class="wrerr wrerr-otd"><span>Пример ошибки</span></label>
 								</div>
-							</div><a href="javascript:;" role="button" class="btn greenbtn">Сохранить</a>
+							</div><a href="javascript:;" role="button" tabindex="16" class="btn greenbtn">Сохранить</a>
 						</form>
 					</div>
 				</div>

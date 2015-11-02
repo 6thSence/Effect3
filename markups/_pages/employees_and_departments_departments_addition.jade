@@ -12,35 +12,33 @@ block link
     link(rel='stylesheet', type='text/css', href='css/jquery.rating.css')
 
 block content
-    .filter
-        input.fln(type='text', placeholder='Быстрый поиск по названию')
     .table.widjet_table.tbody.widjet_table_set
         form.form_set
-            .row.modal-select
-
+            .row
                         .rblock
                             .form_row.form_row_heig
                                 p.h3 Выберите название отдела / филиала
                                 .row
                                     .col.l4.m4.s12
-                                        input(type='url', placeholder='Например, Московский офис').time-select
-                                        //span.descrerr Пример ошибки
+
+                                        input(type='text', placeholder='Например, Московский офис' tabindex="1").time-select
+                                        span.descrerr.descrerr_set Пример ошибки
                                 p.h3 Выберите часовой пояс
                                 .row.row_heig
-                                    .col.m4.s6.time-select_set
-                                        select.dropdown(tabindex='5')
+                                    .col.m4.s12.time-select_add-set
+                                        select.dropdown(tabindex='2')
                                             option.label Россия
                                             option(value='1') Россия
                                             option(value='2') Россия
-                                    .col.m4.s6.time-select_set
-                                        select.dropdown(tabindex='5')
+                                    .col.m4.s12.time-select_add-set
+                                        select.dropdown(tabindex='3')
                                             option.label UTC+3.00-Москва
                                             option(value='1') UTC+4.00-Москва
                                             option(value='2') UTC+5.00-Москва
-                                    .col.l4.m4.s12.graf-work.time-select_set
+                                    .col.m4.s12.graf-work.time-select_add-set
                                         label
                                             span График работы как у отдела
-                                        select.dropdown(tabindex='5')
+                                        select.dropdown(tabindex='4')
                                             option.label Питерский офис
                                             option(value='1') Тип 1
                                             option(value='2') Тип 2
@@ -51,139 +49,139 @@ block content
                     .form_row
                         p.h3 График работы
                         .form_row_checkbox(tabindex='5')
-                            input#distribute2.filled-in(type='checkbox', tabindex='5')
+                            input#distribute2.filled-in(type='checkbox', tabindex='6')
                             label(for='distribute2') Будние дни по одному графику
-                        .form_row_checkbox.form_checkbox_content(tabindex='5')
+                        .form_row_checkbox.form_checkbox_content(tabindex="7")
                             .row.row_spinner
                                 .col.m5.s12
-                                    input#time1.filled-in(type='checkbox', checked='')
+                                    input#time1.filled-in(type='checkbox', checked='' tabindex="6")
                                     label(for='time1') Понедельник
                                 .col.m7.s12
                                     .row
                                         .inline_50
                                             span.inline_span С
-                                            input.spinner(name='spinner', value='08:30', tabindex='5')
+                                            input.spinner(name='spinner', value='08:30',tabindex="8" )
                                         .inline_50
                                             span.inline_span По
-                                            input.spinner(name='spinner', value='08:30', tabindex='5')
-                        .form_row_checkbox.form_checkbox_content(tabindex='5')
+                                            input.spinner(name='spinner', value='08:30', tabindex="9" )
+                        .form_row_checkbox.form_checkbox_content(tabindex="10" )
                             .row.row_spinner
                                 .col.m5.s12
-                                    input#time2.filled-in(type='checkbox', checked='')
+                                    input#time2.filled-in(type='checkbox', checked='' tabindex="11" )
                                     label(for='time2') Вторник
                                 .col.m7.s12
                                     .row
                                         .inline_50
                                             span.inline_span С
-                                            input.spinner(name='spinner', value='08:30', tabindex='5')
+                                            input.spinner(name='spinner', tabindex="12"  value='08:30' )
                                         .inline_50
                                             span.inline_span По
-                                            input.spinner(name='spinner', value='08:30', tabindex='5')
-                        .form_row_checkbox.form_checkbox_content(tabindex='5')
+                                            input.spinner(tabindex="13"  name='spinner', value='08:30')
+                        .form_row_checkbox.form_checkbox_content(tabindex="14" )
                             .row.row_spinner
                                 .col.m5.s12
-                                    input#time3.filled-in(type='checkbox', checked='')
+                                    input#time3.filled-in(tabindex="15" type='checkbox', checked='')
                                     label(for='time3') Среда
                                 .col.m7.s12
                                     .row
                                         .inline_50
                                             span.inline_span С
-                                            input.spinner(name='spinner', value='08:30', tabindex='5')
+                                            input.spinner(tabindex="16" name='spinner', value='08:30')
                                         .inline_50
                                             span.inline_span По
-                                            input.spinner(name='spinner', value='08:30', tabindex='5')
-                        .form_row_checkbox.form_checkbox_content(tabindex='5')
+                                            input.spinner(tabindex="17" name='spinner', value='08:30')
+                        .form_row_checkbox.form_checkbox_content(tabindex="18" )
                             .row.row_spinner
                                 .col.m5.s12
-                                    input#time4.filled-in(type='checkbox', checked='')
+                                    input#time4.filled-in(tabindex="19" type='checkbox', checked='' )
                                     label(for='time4') Четверг
                                 .col.m7.s12
                                     .row
                                         .inline_50
                                             span.inline_span С
-                                            input.spinner(name='spinner', value='08:30', tabindex='5')
+                                            input.spinner(tabindex="20" name='spinner', value='08:30')
                                         .inline_50
                                             span.inline_span По
-                                            input.spinner(name='spinner', value='08:30', tabindex='5')
-                        .form_row_checkbox.form_checkbox_content(tabindex='5')
+                                            input.spinner(tabindex="21" name='spinner', value='08:30')
+                        .form_row_checkbox.form_checkbox_content(tabindex="22" )
                             .row.row_spinner
                                 .col.m5.s12
-                                    input#time5.filled-in(type='checkbox', checked='')
+                                    input#time5.filled-in(tabindex="23" type='checkbox', checked='')
                                     label(for='time5') Пятница
                                 .col.m7.s12
                                     .row
                                         .inline_50
                                             span.inline_span С
-                                            input.spinner(name='spinner', value='08:30', tabindex='5')
+                                            input.spinner(tabindex="24" name='spinner', value='08:30')
                                         .inline_50
                                             span.inline_span По
-                                            input.spinner(name='spinner', value='08:30', tabindex='5')
-                        .form_row_checkbox.form_checkbox_content(tabindex='5')
+                                            input.spinner(tabindex="25" name='spinner', value='08:30')
+                        .form_row_checkbox.form_checkbox_content(tabindex="26" )
                             .row.row_spinner
                                 .col.m5.s12
-                                    input#time6.filled-in(type='checkbox', checked='')
+                                    input#time6.filled-in(tabindex="27" type='checkbox', checked='')
                                     label(for='time6') Суббота
                                 .col.m7.s12
                                     .row
                                         .inline_50
                                             span.inline_span С
-                                            input.spinner(name='spinner', value='08:30', tabindex='5')
+                                            input.spinner(tabindex="28" name='spinner', value='08:30')
                                         .inline_50
                                             span.inline_span По
-                                            input.spinner(name='spinner', value='08:30', tabindex='5')
-                        .form_row_checkbox.form_checkbox_content(tabindex='5')
+                                            input.spinner(tabindex="29" name='spinner', value='08:30')
+                        .form_row_checkbox.form_checkbox_content(tabindex="30" )
                             .row.row_spinner
                                 .col.m5.s12
-                                    input#time7.filled-in(type='checkbox', checked='')
+                                    input#time7.filled-in(tabindex="31" type='checkbox', checked='')
                                     label(for='time7') Воскресенье
                                 .col.m7.s12
                                     .row
                                         .inline_50
                                             span.inline_span С
-                                            input.spinner(name='spinner', value='08:30', tabindex='5')
+                                            input.spinner(tabindex="32" name='spinner', value='08:30')
                                         .inline_50
                                             span.inline_span По
-                                            input.spinner(name='spinner', value='08:30', tabindex='5')
+                                            input.spinner(tabindex="33" name='spinner', value='08:30')
             .form_row
                 .form_row
                     p.h3 Дополнительные настройки
-                    .form_row_checkbox(tabindex='5')
-                        input#dop1.filled-in(type='checkbox', tabindex='5')
+                    .form_row_checkbox(tabindex="34" )
+                        input#dop1.filled-in(type='checkbox' tabindex="35" )
                         label(for='dop1') Включить геофильтр
-                    .form_row_checkbox(tabindex='5')
-                        input#dop2.filled-in(type='checkbox', tabindex='5')
+                    .form_row_checkbox(tabindex="36" )
+                        input#dop2.filled-in(type='checkbox' tabindex="37" )
                         label(for='dop2') Отправлять клиентам sms с именем менеджера
-                    .form_row_checkbox(tabindex='5')
-                        input#dop3.filled-in(type='checkbox', tabindex='5')
+                    .form_row_checkbox(tabindex="38" )
+                        input#dop3.filled-in(type='checkbox' tabindex="39" )
                         label(for='dop3') Отправлять sms о пропущенном звонке от клиента
                         .url-block
-                            input.seeend(type='tel', placeholder='+7(___)-___-__-__', tabindex='5')
-                            //span.descrerr Пример ошибки
+                            input.seeend(tabindex="40" type='tel', placeholder='+7(___)-___-__-__')
+                        span.descrerr Пример ошибки
                 .form_row
                     p.h3.small_bot Настройки e-mail отчетности
-                    .form_row_checkbox(tabindex='5')
+                    .form_row_checkbox()
                         .url-block
                             label
-                                input.seeend(type='email', placeholder='info@site_name.ru', tabindex='5')
+                                input.seeend(tabindex="41"  type='email', placeholder='info@site_name.ru')
                                 span e-mail для отчетов
-                            //span.descrerr Пример ошибки
+                        span.descrerr Пример ошибки
                 .form_row.range-row
-                    .form_row_checkbox(tabindex='5')
-                        input#tune1.filled-in(type='checkbox', tabindex='5')
+                    .form_row_checkbox(tabindex="43" )
+                        input#tune1.filled-in(type='checkbox' tabindex="44" )
                         label(for='tune1') Отправлять отчеты о всех совершенных звонках
-                    .form_row_checkbox(tabindex='5')
-                        input#tune2.filled-in(type='checkbox', tabindex='5')
+                    .form_row_checkbox(tabindex="45")
+                        input#tune2.filled-in(tabindex="46" type='checkbox')
                         label(for='tune2') Отправлять отчеты только о звонках с оценкой клиента
                         .raiting
-                            input.val(type='hidden', value='1.75')
-                            input.votes(type='hidden', value='2')
+                            input.val( type='hidden', value='1.75' )
+                            input.votes(type='hidden', value='2' )
                         |и ниже
-                    .form_row_checkbox(tabindex='5')
-                        input#tune3.filled-in(type='checkbox', tabindex='5')
+                    .form_row_checkbox(tabindex="47")
+                        input#tune3.filled-in(type='checkbox' tabindex="48" )
                         label(for='tune3') Отправлять отчеты об общении в чате с оценкой клиента
                         .raiting
-                            input.val(type='hidden', value='1.75')
-                            input.votes(type='hidden', value='2')
+                            input.val(type='hidden', value='1.75' )
+                            input.votes(type='hidden', value='2' )
                         |  и ниже
                 p.h3 Добавить сотрудников в отдел
                 .text-center
@@ -191,45 +189,45 @@ block content
                         p.text-left Выбраны 8 из 9
                         ul.list-inline.add-emp.add-emp_set
                             li
-                                .form_row_checkbox(tabindex='5')
-                                    input#emploe1.filled-in(type='checkbox', tabindex='5')
+                                .form_row_checkbox(tabindex="49" )
+                                    input#emploe1.filled-in(tabindex="50" type='checkbox', )
                                     label(for='emploe1')
                                         span.img-block
                                             img.img-circle(src='image/helen.jpg', alt='')
                                         span Елена
                             li
-                                .form_row_checkbox(tabindex='5')
-                                    input#emploe2.filled-in(type='checkbox', tabindex='5')
+                                .form_row_checkbox(tabindex="51")
+                                    input#emploe2.filled-in(tabindex="52" type='checkbox')
                                     label(for='emploe2')
                                         span.img-block
                                             img.img-circle(src='image/helen.jpg', alt='')
                                         span Елена
                             li
-                                .form_row_checkbox(tabindex='5')
-                                    input#emploe3.filled-in(type='checkbox', tabindex='5')
+                                .form_row_checkbox(tabindex="53")
+                                    input#emploe3.filled-in(type='checkbox', tabindex="54")
                                     label(for='emploe3')
                                         span.img-block
                                             img.img-circle(src='image/helen.jpg', alt='')
                                         span Елена
                             li
-                                .form_row_checkbox(tabindex='5')
-                                    input#emploe4.filled-in(type='checkbox', tabindex='5')
+                                .form_row_checkbox(tabindex="55")
+                                    input#emploe4.filled-in(tabindex="56" type='checkbox', )
                                     label(for='emploe4')
                                         span.img-block
                                             img.img-circle(src='image/helen.jpg', alt='')
                                         span Елена
                             li
-                                .form_row_checkbox(tabindex='5')
-                                    input#emploe5.filled-in(type='checkbox', tabindex='5')
+                                .form_row_checkbox(tabindex="57" )
+                                    input#emploe5.filled-in(tabindex="58" type='checkbox',)
                                     label(for='emploe5')
                                         span.img-block
                                             img.img-circle(src='image/helen.jpg', alt='')
                                         span Елена
                             li
-                                .form_row_checkbox(tabindex='5')
-                                    input#emploe6.filled-in(type='checkbox', tabindex='5')
+                                .form_row_checkbox(tabindex="59" )
+                                    input#emploe6.filled-in(tabindex="60" type='checkbox')
                                     label(for='emploe6')
                                         span.img-block
                                             img.img-circle(src='image/helen.jpg', alt='')
                                         span Елена
-            a.btn.greenbtn(href='javascript:;', role='button') Сохранить
+            a.btn.greenbtn(tabindex="61" href='javascript:;', role='button') Сохранить

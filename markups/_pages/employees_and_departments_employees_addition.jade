@@ -11,25 +11,29 @@ block link
     link(rel='stylesheet', type='text/css', href='ui/jquery-ui.theme.css')
     link(rel='stylesheet', type='text/css', href='css/jquery.rating.css')
 block content
-    .filter
-        input.fln(type='text', placeholder='Быстрый поиск по названию')
     .table.widjet_table.tbody.widjet_table_set
         form.form_set2
-
             .form_row.form_row_heig
                 .row
                     .wrapp_set_down
                         .add-pick__pick
                     p.add-pick__text_down
                         a.pick__text_down_inner(href='#') Загрузить фото
-                .row
+                .row.row_descrerr
                     .col.l4.m4.s12
-                        input(type='url', placeholder='Имя').time-select
-                        input(type='url', placeholder='Фамилия').time-select
+                        input(type='url', placeholder='Имя' tabindex="1").time-select
+                        label.wrerr
+                            span Пример ошибки
+                        input(type='url', placeholder='Фамилия' tabindex="2").time-select
+                        label.wrerr
+                            span Пример ошибки
                     .col.l4.m4.s12
-                        input(type='url', placeholder='E-mail сотрудника').time-select
-                        input(type='url', placeholder='Пароль').time-select
-                        //span.descrerr Пример ошибки
+                        input(type='url', placeholder='E-mail сотрудника' tabindex="3").time-select
+                        label.wrerr
+                            span Пример ошибки
+                        input(type='url', placeholder='Пароль' tabindex="4").time-select
+                        label.wrerr
+                            span Пример ошибки
                 p.h3 Выберите часовой пояс
                 .row.row_heig
                     .col.m4.s6.time-select_set.tell_set
@@ -38,38 +42,42 @@ block content
                             option(value='1') Россия
                             option(value='2') Россия
                     .col.m4.s6.time-select_set.tell_set
-                        select.dropdown(tabindex='5')
+                        select.dropdown(tabindex='6')
                             option.label UTC+3.00-Москва
                             option(value='1') UTC+4.00-Москва
                             option(value='2') UTC+5.00-Москва
                     .col.l4.m4.s12.time-select_set.tell_set
                         .url-block
-                            input.seeend.tell_input(type='tel', placeholder='+7(___)-___-__-__', tabindex='5')
+                            input.seeend.tell_input(type='tel', placeholder='+7(___)-___-__-__', tabindex='7')
+                            label.wrerr.wrerr-tel
+                                span Пример ошибки
                     .col.l4.m4.s12.time-select_set.tell_set
                         .url-block
-                            input.seeend.tell_input(type='tel', placeholder='', tabindex='5')
+                            input.seeend.tell_input(type='tel', placeholder='', tabindex='8')
                             label.dop_tell
                                 span Доп. номер
 
             .form_row
                 .form_row
                     p.h3 Дополнительные настройки
-                    .form_row_checkbox(tabindex='5')
-                        input#dop1.filled-in(type='checkbox', tabindex='5')
+                    .form_row_checkbox(tabindex='9')
+                        input#dop1.filled-in(type='checkbox', tabindex='10')
                         label(for='dop1') Может принимать звонки от клиентов
-                    .form_row_checkbox(tabindex='5')
-                        input#dop2.filled-in(type='checkbox', tabindex='5')
+                    .form_row_checkbox(tabindex='11')
+                        input#dop2.filled-in(type='checkbox', tabindex='12')
                         label(for='dop2') Может обращаться в онлайн чате с клиентами
-                    .form_row_checkbox(tabindex='5')
-                        input#dop3.filled-in(type='checkbox', tabindex='5')
+                    .form_row_checkbox(tabindex='13')
+                        input#dop3.filled-in(type='checkbox', tabindex='14')
                         label(for='dop3') Может принимать текстовые запросы от клиентов
 
 
 
                 p.h3 Определить в отдел / отделы
                 .form_row
-                    select#choise.chosen-select(data-placeholder='Выберите отдел', multiple='', tabindex='-1')
+                    select#choise.chosen-select(data-placeholder='Выберите отдел', multiple='', tabindex='15')
                         option(selected='') Технический отдел
                         option Отдел продаж
-            a.btn.greenbtn(href='javascript:;', role='button') Сохранить
+                    label.wrerr.wrerr-otd
+                        span Пример ошибки
+            a.btn.greenbtn(href='javascript:;', role='button' tabindex='16') Сохранить
                                

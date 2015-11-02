@@ -1,9 +1,14 @@
 @media screen and (max-width: 720px){
-
+  .marg-l{
+    //margin-left: 0 !important;
+  }
   .modal-select {
     height: 450px !important;
   }
-  .time-select_set {
+  .modal-select {
+    height: 450px !important;
+  }
+  .time-select_add-set {
     margin-bottom: 50px !important;
     margin-right: 50px !important;
   }
@@ -16,8 +21,26 @@
     width: 175px !important;
     margin-right: 20px;
     .dropdown {
-      width: 175px !important;
+      width: 205px !important;
     }
   }
 }
 
+@media screen and (max-width: 720px){
+  .graf-work {
+    margin-bottom: 20px !important;
+    top: 0px !important;
+    position: relative;
+  }
+
+  .col_set {
+
+    width: 175px !important;
+    margin-right: 20px;
+
+  }
+  .time-select_add-set {
+    margin-bottom: 50px !important;
+    margin-right: 50px !important;
+  }
+}

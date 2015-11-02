@@ -2,10 +2,10 @@ extends ../main
 block title
     | Отделы
 block additional_button
-    a.addscene.greenbtn(href='javascript:;', role='button') Добавить сайт
+    a.addscene.greenbtn(href='javascript:;', role='button') Добавить отдел
 block content
     .filter
-        input.fln(type='text', placeholder='Быстрый поиск по названию')
+        input.fln(type='text', placeholder='Быстрый поиск по названию', tabindex="1")
     .table.widjet_table.thead
         .trow.throw
             .tcol.tcol_1 Сайт

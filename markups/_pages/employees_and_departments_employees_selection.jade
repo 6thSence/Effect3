@@ -5,24 +5,24 @@ block additional_button
     a.addscene.greenbtn.addscene__set(href='javascript:;', role='button') Добавить сотрудника
 block content
     .filter.dropdown_set
-        input.fln.fln_set(type='text', placeholder='Быстрый поиск по названию')
-        .wrap_for_sel
-            .col.m3.s6.col_set
-                select.dropdown(tabindex='5')
-                    option.label Все сайты
-                    option(value='1') Все сайты
-                    option(value='2') Все сайты
-            .col.m6.s6.col_set
-                select.dropdown(tabindex='5')
-                    option.label Все отделы
-                    option(value='1') Все отделы
-                    option(value='2') Все отделы
+        .col.m5.s12.mrg
+            input.fln.fln_set(type='text', placeholder='Быстрый поиск по названию' tabindex="1")
+        .col.m4.s12.mrg
+            select.dropdown(tabindex='2')
+                option.label Все сайты
+                option(value='1') Все сайты
+                option(value='2') Все сайты
+        .col.m3.s12.mrg
+            select.dropdown(tabindex='3')
+                option.label Все отделы
+                option(value='1') Все отделы
+                option(value='2') Все отделы
 
     .table.widjet_table.tbody.tbody-nbb
         .tbody__inner-wrapp
             .form_row_checkbox.form_row_checkbox_set(tabindex='5')
-                input#distribute1.filled-in(type='checkbox')
-                label(for='distribute1') Выбраны 5 из 8
+                input#distribute1.filled-in(type='checkbox', tabindex='4')
+                label(for='distribute1' tabindex='4') Выбраны 5 из 8
             .col.m6.s6.col_set
                 select.dropdown(tabindex='5')
                     option.label Все отделы
@@ -31,7 +31,7 @@ block content
     .table.widjet_table.tbody.tbody-nbt
         .trow
             .tcol.tcol_1.tcol_1-set
-                .form_row_checkbox(tabindex='5')
+                .form_row_checkbox(tabindex='6')
                     input#distribute2.filled-in(type='checkbox')
                     label(for='distribute2')
                     span.img-block
@@ -53,7 +53,7 @@ block content
                             a(href='javascript:;', role='button') Удалить
         .trow
             .tcol.tcol_1
-                .form_row_checkbox(tabindex='5')
+                .form_row_checkbox(tabindex='7')
                     input#distribute4.filled-in(type='checkbox')
                     label(for='distribute4')
                     span.img-block
@@ -75,7 +75,7 @@ block content
                             a(href='javascript:;', role='button') Удалить
         .trow
             .tcol.tcol_1
-                .form_row_checkbox(tabindex='5')
+                .form_row_checkbox(tabindex='8')
                     input#distribute3.filled-in(type='checkbox')
                     label(for='distribute3')
                     span.img-block

@@ -5,7 +5,7 @@
 /* --------- fonts --------- */
 /* --------- sections --------- */
 .fln_set {
-  float: left;
+  float: left !important;
 }
 
 .tbody__inner-wrapp {
@@ -20,6 +20,14 @@
 .tbody {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+.dropdown_set .mrg {
+  margin-bottom: 20px !important;
+}
+
+.marg-l {
+  margin-left: -50px !important;
 }
 
 .wrap_for_sel {
@@ -83,7 +91,7 @@
 
 .graf-work {
   margin-bottom: 20px;
-  top: -42px;
+  top: -17px;
   position: relative;
 }
 
@@ -92,7 +100,7 @@
 }
 
 .time-select {
-  margin-bottom: 15px;
+  margin-bottom: 25px;
   width: 250px;
 }
 
@@ -157,13 +165,40 @@
   border-bottom: 1px solid;
 }
 
+.descrerr_set {
+  top: 45px !important;
+}
+
+.time-select {
+  margin-bottom: 35px !important;
+}
+
+.wrerr {
+  color: red;
+  position: relative;
+  top: -35px;
+  left: -10px;
+}
+
+.wrerr-tel {
+  top: -5px;
+}
+
+.wrerr-otd {
+  top: 0;
+}
+
 /* --------- media queries --------- */
 @media screen and (max-width: 720px) {
   .modal-select {
     height: 450px !important;
   }
 
-  .time-select_set {
+  .modal-select {
+    height: 450px !important;
+  }
+
+  .time-select_add-set {
     margin-bottom: 50px !important;
     margin-right: 50px !important;
   }
@@ -177,6 +212,23 @@
     margin-right: 20px;
   }
   .col_set .dropdown {
+    width: 205px !important;
+  }
+}
+@media screen and (max-width: 720px) {
+  .graf-work {
+    margin-bottom: 20px !important;
+    top: 0px !important;
+    position: relative;
+  }
+
+  .col_set {
     width: 175px !important;
+    margin-right: 20px;
+  }
+
+  .time-select_add-set {
+    margin-bottom: 50px !important;
+    margin-right: 50px !important;
   }
 }
