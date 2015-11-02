@@ -4,6 +4,10 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="ui/jquery-ui.css">
+		<link rel="stylesheet" type="text/css" href="ui/jquery-ui.structure.css">
+		<link rel="stylesheet" type="text/css" href="ui/jquery-ui.theme.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery.rating.css">
 		<link type="text/css" rel="stylesheet" href="css/style.css">
 		<link type="text/css" rel="stylesheet" href="css/main.css">
 	</head>
@@ -101,54 +105,283 @@
 					<div class="filter">
 						<input type="text" placeholder="Быстрый поиск по названию" class="fln">
 					</div>
-					<div class="table widjet_table thead">
-						<div class="trow throw">
-							<div class="tcol tcol_1">Сайт</div>
-							<div class="tcol tcol_2">Cтатус</div>
-							<div class="tcol tcol_3">Доступные действия</div>
-						</div>
-					</div>
-					<div class="table widjet_table tbody">
-						<div class="trow">
-							<div class="tcol tcol_1"><a href="javascript:;" role="button" target="_blank" class="script_table_site">www.gazpromcompany.ru</a></div>
-							<div class="tcol tcol_2"><span class="status on">Установлен</span><span class="test">Проверить установку</span></div>
-							<div class="tcol tcol_3">
-								<div class="drop-block">
-									<button type="button" aria-label="Toggle Navigation" class="lines-button x"><span class="lines"></span></button>
-									<ul class="dropmenu">
-										<li><a href="javascript:;" role="button">Редактировать</a></li>
-										<li><a href="javascript:;" role="button">Остановить</a></li>
-										<li><a href="javascript:;" role="button">Удалить</a></li>
-									</ul>
+					<div class="table widjet_table tbody widjet_table_set">
+						<form class="form_set">
+							<div class="row modal-select">
+								<div class="rblock">
+									<div class="form_row form_row_heig">
+										<p class="h3">Выберите название отдела / филиала</p>
+										<div class="row">
+											<div class="col l4 m4 s12">
+												<input type="url" placeholder="Например, Московский офис" class="time-select">
+												<!--span.descrerr Пример ошибки-->
+											</div>
+										</div>
+										<p class="h3">Выберите часовой пояс</p>
+										<div class="row row_heig">
+											<div class="col m4 s6 time-select_set">
+												<select tabindex="5" class="dropdown">
+													<option class="label">Россия</option>
+													<option value="1">Россия</option>
+													<option value="2">Россия</option>
+												</select>
+											</div>
+											<div class="col m4 s6 time-select_set">
+												<select tabindex="5" class="dropdown">
+													<option class="label">UTC+3.00-Москва</option>
+													<option value="1">UTC+4.00-Москва</option>
+													<option value="2">UTC+5.00-Москва</option>
+												</select>
+											</div>
+											<div class="col l4 m4 s12 graf-work time-select_set">
+												<label><span>График работы как у отдела</span></label>
+												<select tabindex="5" class="dropdown">
+													<option class="label">Питерский офис</option>
+													<option value="1">Тип 1</option>
+													<option value="2">Тип 2</option>
+													<option value="3">Тип 3</option>
+												</select>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="trow">
-							<div class="tcol tcol_1"><a href="javascript:;" role="button" target="_blank" class="script_table_site">www.gazpromcompany.ru</a></div>
-							<div class="tcol tcol_2"><span class="status on">Установлен</span><span class="test">Проверить установку</span></div>
-							<div class="tcol tcol_3">
-								<div class="drop-block">
-									<button type="button" aria-label="Toggle Navigation" class="lines-button x"><span class="lines"></span></button>
-									<ul class="dropmenu">
-										<li><a href="javascript:;" role="button">Редактировать</a></li>
-										<li><a href="javascript:;" role="button">Остановить</a></li>
-									</ul>
+							<div class="row">
+								<div class="col l8 m12 s12">
+									<div class="form_row">
+										<p class="h3">График работы</p>
+										<div tabindex="5" class="form_row_checkbox">
+											<input id="distribute2" type="checkbox" tabindex="5" class="filled-in">
+											<label for="distribute2">Будние дни по одному графику</label>
+										</div>
+										<div tabindex="5" class="form_row_checkbox form_checkbox_content">
+											<div class="row row_spinner">
+												<div class="col m5 s12">
+													<input id="time1" type="checkbox" checked="" class="filled-in">
+													<label for="time1">Понедельник</label>
+												</div>
+												<div class="col m7 s12">
+													<div class="row">
+														<div class="inline_50"><span class="inline_span">С</span>
+															<input name="spinner" value="08:30" tabindex="5" class="spinner">
+														</div>
+														<div class="inline_50"><span class="inline_span">По</span>
+															<input name="spinner" value="08:30" tabindex="5" class="spinner">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div tabindex="5" class="form_row_checkbox form_checkbox_content">
+											<div class="row row_spinner">
+												<div class="col m5 s12">
+													<input id="time2" type="checkbox" checked="" class="filled-in">
+													<label for="time2">Вторник</label>
+												</div>
+												<div class="col m7 s12">
+													<div class="row">
+														<div class="inline_50"><span class="inline_span">С</span>
+															<input name="spinner" value="08:30" tabindex="5" class="spinner">
+														</div>
+														<div class="inline_50"><span class="inline_span">По</span>
+															<input name="spinner" value="08:30" tabindex="5" class="spinner">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div tabindex="5" class="form_row_checkbox form_checkbox_content">
+											<div class="row row_spinner">
+												<div class="col m5 s12">
+													<input id="time3" type="checkbox" checked="" class="filled-in">
+													<label for="time3">Среда</label>
+												</div>
+												<div class="col m7 s12">
+													<div class="row">
+														<div class="inline_50"><span class="inline_span">С</span>
+															<input name="spinner" value="08:30" tabindex="5" class="spinner">
+														</div>
+														<div class="inline_50"><span class="inline_span">По</span>
+															<input name="spinner" value="08:30" tabindex="5" class="spinner">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div tabindex="5" class="form_row_checkbox form_checkbox_content">
+											<div class="row row_spinner">
+												<div class="col m5 s12">
+													<input id="time4" type="checkbox" checked="" class="filled-in">
+													<label for="time4">Четверг</label>
+												</div>
+												<div class="col m7 s12">
+													<div class="row">
+														<div class="inline_50"><span class="inline_span">С</span>
+															<input name="spinner" value="08:30" tabindex="5" class="spinner">
+														</div>
+														<div class="inline_50"><span class="inline_span">По</span>
+															<input name="spinner" value="08:30" tabindex="5" class="spinner">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div tabindex="5" class="form_row_checkbox form_checkbox_content">
+											<div class="row row_spinner">
+												<div class="col m5 s12">
+													<input id="time5" type="checkbox" checked="" class="filled-in">
+													<label for="time5">Пятница</label>
+												</div>
+												<div class="col m7 s12">
+													<div class="row">
+														<div class="inline_50"><span class="inline_span">С</span>
+															<input name="spinner" value="08:30" tabindex="5" class="spinner">
+														</div>
+														<div class="inline_50"><span class="inline_span">По</span>
+															<input name="spinner" value="08:30" tabindex="5" class="spinner">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div tabindex="5" class="form_row_checkbox form_checkbox_content">
+											<div class="row row_spinner">
+												<div class="col m5 s12">
+													<input id="time6" type="checkbox" checked="" class="filled-in">
+													<label for="time6">Суббота</label>
+												</div>
+												<div class="col m7 s12">
+													<div class="row">
+														<div class="inline_50"><span class="inline_span">С</span>
+															<input name="spinner" value="08:30" tabindex="5" class="spinner">
+														</div>
+														<div class="inline_50"><span class="inline_span">По</span>
+															<input name="spinner" value="08:30" tabindex="5" class="spinner">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div tabindex="5" class="form_row_checkbox form_checkbox_content">
+											<div class="row row_spinner">
+												<div class="col m5 s12">
+													<input id="time7" type="checkbox" checked="" class="filled-in">
+													<label for="time7">Воскресенье</label>
+												</div>
+												<div class="col m7 s12">
+													<div class="row">
+														<div class="inline_50"><span class="inline_span">С</span>
+															<input name="spinner" value="08:30" tabindex="5" class="spinner">
+														</div>
+														<div class="inline_50"><span class="inline_span">По</span>
+															<input name="spinner" value="08:30" tabindex="5" class="spinner">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="trow">
-							<div class="tcol tcol_1"><a href="javascript:;" role="button" target="_blank" class="script_table_site">www.gazpromcompany.ru</a></div>
-							<div class="tcol tcol_2"><span class="status off">Не установлен</span><span class="test">Проверить установку</span></div>
-							<div class="tcol tcol_3">
-								<div class="drop-block">
-									<button type="button" aria-label="Toggle Navigation" class="lines-button x"><span class="lines"></span></button>
-									<ul class="dropmenu">
-										<li><a href="javascript:;" role="button">Редактировать</a></li>
-										<li><a href="javascript:;" role="button">Остановить</a></li>
-									</ul>
+							<div class="form_row">
+								<div class="form_row">
+									<p class="h3">Дополнительные настройки</p>
+									<div tabindex="5" class="form_row_checkbox">
+										<input id="dop1" type="checkbox" tabindex="5" class="filled-in">
+										<label for="dop1">Включить геофильтр</label>
+									</div>
+									<div tabindex="5" class="form_row_checkbox">
+										<input id="dop2" type="checkbox" tabindex="5" class="filled-in">
+										<label for="dop2">Отправлять клиентам sms с именем менеджера</label>
+									</div>
+									<div tabindex="5" class="form_row_checkbox">
+										<input id="dop3" type="checkbox" tabindex="5" class="filled-in">
+										<label for="dop3">Отправлять sms о пропущенном звонке от клиента</label>
+										<div class="url-block">
+											<input type="tel" placeholder="+7(___)-___-__-__" tabindex="5" class="seeend">
+											<!--span.descrerr Пример ошибки-->
+										</div>
+									</div>
 								</div>
-							</div>
-						</div>
+								<div class="form_row">
+									<p class="h3 small_bot">Настройки e-mail отчетности</p>
+									<div tabindex="5" class="form_row_checkbox">
+										<div class="url-block">
+											<label>
+												<input type="email" placeholder="info@site_name.ru" tabindex="5" class="seeend"><span>e-mail для отчетов</span>
+											</label>
+											<!--span.descrerr Пример ошибки-->
+										</div>
+									</div>
+								</div>
+								<div class="form_row range-row">
+									<div tabindex="5" class="form_row_checkbox">
+										<input id="tune1" type="checkbox" tabindex="5" class="filled-in">
+										<label for="tune1">Отправлять отчеты о всех совершенных звонках</label>
+									</div>
+									<div tabindex="5" class="form_row_checkbox">
+										<input id="tune2" type="checkbox" tabindex="5" class="filled-in">
+										<label for="tune2">Отправлять отчеты только о звонках с оценкой клиента</label>
+										<div class="raiting">
+											<input type="hidden" value="1.75" class="val">
+											<input type="hidden" value="2" class="votes">
+										</div>и ниже
+									</div>
+									<div tabindex="5" class="form_row_checkbox">
+										<input id="tune3" type="checkbox" tabindex="5" class="filled-in">
+										<label for="tune3">Отправлять отчеты об общении в чате с оценкой клиента</label>
+										<div class="raiting">
+											<input type="hidden" value="1.75" class="val">
+											<input type="hidden" value="2" class="votes">
+										</div> и ниже
+									</div>
+								</div>
+								<p class="h3">Добавить сотрудников в отдел</p>
+								<div class="text-center">
+									<div class="inline-block">
+										<p class="text-left">Выбраны 8 из 9</p>
+										<ul class="list-inline add-emp add-emp_set">
+											<li>
+												<div tabindex="5" class="form_row_checkbox">
+													<input id="emploe1" type="checkbox" tabindex="5" class="filled-in">
+													<label for="emploe1"><span class="img-block"><img src="image/helen.jpg" alt="" class="img-circle"></span><span>Елена</span></label>
+												</div>
+											</li>
+											<li>
+												<div tabindex="5" class="form_row_checkbox">
+													<input id="emploe2" type="checkbox" tabindex="5" class="filled-in">
+													<label for="emploe2"><span class="img-block"><img src="image/helen.jpg" alt="" class="img-circle"></span><span>Елена</span></label>
+												</div>
+											</li>
+											<li>
+												<div tabindex="5" class="form_row_checkbox">
+													<input id="emploe3" type="checkbox" tabindex="5" class="filled-in">
+													<label for="emploe3"><span class="img-block"><img src="image/helen.jpg" alt="" class="img-circle"></span><span>Елена</span></label>
+												</div>
+											</li>
+											<li>
+												<div tabindex="5" class="form_row_checkbox">
+													<input id="emploe4" type="checkbox" tabindex="5" class="filled-in">
+													<label for="emploe4"><span class="img-block"><img src="image/helen.jpg" alt="" class="img-circle"></span><span>Елена</span></label>
+												</div>
+											</li>
+											<li>
+												<div tabindex="5" class="form_row_checkbox">
+													<input id="emploe5" type="checkbox" tabindex="5" class="filled-in">
+													<label for="emploe5"><span class="img-block"><img src="image/helen.jpg" alt="" class="img-circle"></span><span>Елена</span></label>
+												</div>
+											</li>
+											<li>
+												<div tabindex="5" class="form_row_checkbox">
+													<input id="emploe6" type="checkbox" tabindex="5" class="filled-in">
+													<label for="emploe6"><span class="img-block"><img src="image/helen.jpg" alt="" class="img-circle"></span><span>Елена</span></label>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div><a href="javascript:;" role="button" class="btn greenbtn">Сохранить</a>
+						</form>
 					</div>
 				</div>
 			</div>
@@ -188,5 +421,8 @@
 			</div>
 		</div>
 		<script src="js/main.js"></script>
+		<script src="ui/jquery-ui.js"></script>
+		<script src="js/jquery.rating.min.js"></script>
+		<script src="js/addition_second.js"></script>
 	</body>
 </html>

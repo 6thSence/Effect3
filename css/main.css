@@ -54,11 +54,6 @@
   width: 230px !important;
 }
 
-@media screen and (max-width: 480px) {
-  .addscene__set {
-    width: 240px !important;
-  }
-}
 .tbody-nbb {
   border-bottom: none;
 }
@@ -77,4 +72,48 @@
   width: 105px !important;
 }
 
+.form_set {
+  max-width: 720px;
+}
+
+.widjet_table_set {
+  padding: 40px 0 40px 40px;
+}
+
+.graf-work {
+  margin-bottom: 20px;
+  top: -42px;
+  position: relative;
+}
+
+.dropdown {
+  width: 205px;
+}
+
+.time-select {
+  margin-bottom: 15px;
+  width: 290px;
+}
+
+.modal-select {
+  height: 200px !important;
+}
+
+.add-emp_set {
+  max-width: 620px;
+}
+
 /* --------- media queries --------- */
+@media screen and (max-width: 720px) {
+  .modal-select {
+    height: 450px !important;
+  }
+
+  .time-select_set {
+    margin-bottom: 50px !important;
+    margin-right: 50px !important;
+  }
+}
+.addscene__set {
+  width: 240px !important;
+}

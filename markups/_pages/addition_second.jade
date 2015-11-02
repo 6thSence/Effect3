@@ -1,59 +1,235 @@
 extends ../main
 block title
     | Добавить сотрудника
+block script
+    script(src='ui/jquery-ui.js')
+    script(src='js/jquery.rating.min.js')
+    script(src='js/addition_second.js')
+block link
+    link(rel='stylesheet', type='text/css', href='ui/jquery-ui.css')
+    link(rel='stylesheet', type='text/css', href='ui/jquery-ui.structure.css')
+    link(rel='stylesheet', type='text/css', href='ui/jquery-ui.theme.css')
+    link(rel='stylesheet', type='text/css', href='css/jquery.rating.css')
+
 block content
     .filter
         input.fln(type='text', placeholder='Быстрый поиск по названию')
-    .table.widjet_table.thead
-        .trow.throw
-            .tcol.tcol_1 Сайт
-            .tcol.tcol_2 Cтатус
-            .tcol.tcol_3 Доступные действия
-    .table.widjet_table.tbody
-        .trow
-            .tcol.tcol_1
-                a.script_table_site(href='javascript:;', role='button', target='_blank') www.gazpromcompany.ru
-            .tcol.tcol_2
-                span.status.on Установлен
-                span.test Проверить установку
-            .tcol.tcol_3
-                .drop-block
-                    button.lines-button.x(type='button', aria-label='Toggle Navigation')
-                        span.lines
-                    ul.dropmenu
-                        li
-                            a(href='javascript:;', role='button') Редактировать
-                        li
-                            a(href='javascript:;', role='button') Остановить
-                        li
-                            a(href='javascript:;', role='button') Удалить
-        .trow
-            .tcol.tcol_1
-                a.script_table_site(href='javascript:;', role='button', target='_blank') www.gazpromcompany.ru
-            .tcol.tcol_2
-                span.status.on Установлен
-                span.test Проверить установку
-            .tcol.tcol_3
-                .drop-block
-                    button.lines-button.x(type='button', aria-label='Toggle Navigation')
-                        span.lines
-                    ul.dropmenu
-                        li
-                            a(href='javascript:;', role='button') Редактировать
-                        li
-                            a(href='javascript:;', role='button') Остановить
-        .trow
-            .tcol.tcol_1
-                a.script_table_site(href='javascript:;', role='button', target='_blank') www.gazpromcompany.ru
-            .tcol.tcol_2
-                span.status.off Не установлен
-                span.test Проверить установку
-            .tcol.tcol_3
-                .drop-block
-                    button.lines-button.x(type='button', aria-label='Toggle Navigation')
-                        span.lines
-                    ul.dropmenu
-                        li
-                            a(href='javascript:;', role='button') Редактировать
-                        li
-                            a(href='javascript:;', role='button') Остановить
+    .table.widjet_table.tbody.widjet_table_set
+        form.form_set
+            .row.modal-select
+
+                        .rblock
+                            .form_row.form_row_heig
+                                p.h3 Выберите название отдела / филиала
+                                .row
+                                    .col.l4.m4.s12
+                                        input(type='url', placeholder='Например, Московский офис').time-select
+                                        //span.descrerr Пример ошибки
+                                p.h3 Выберите часовой пояс
+                                .row.row_heig
+                                    .col.m4.s6.time-select_set
+                                        select.dropdown(tabindex='5')
+                                            option.label Россия
+                                            option(value='1') Россия
+                                            option(value='2') Россия
+                                    .col.m4.s6.time-select_set
+                                        select.dropdown(tabindex='5')
+                                            option.label UTC+3.00-Москва
+                                            option(value='1') UTC+4.00-Москва
+                                            option(value='2') UTC+5.00-Москва
+                                    .col.l4.m4.s12.graf-work.time-select_set
+                                        label
+                                            span График работы как у отдела
+                                        select.dropdown(tabindex='5')
+                                            option.label Питерский офис
+                                            option(value='1') Тип 1
+                                            option(value='2') Тип 2
+                                            option(value='3') Тип 3
+
+            .row
+                .col.l8.m12.s12
+                    .form_row
+                        p.h3 График работы
+                        .form_row_checkbox(tabindex='5')
+                            input#distribute2.filled-in(type='checkbox', tabindex='5')
+                            label(for='distribute2') Будние дни по одному графику
+                        .form_row_checkbox.form_checkbox_content(tabindex='5')
+                            .row.row_spinner
+                                .col.m5.s12
+                                    input#time1.filled-in(type='checkbox', checked='')
+                                    label(for='time1') Понедельник
+                                .col.m7.s12
+                                    .row
+                                        .inline_50
+                                            span.inline_span С
+                                            input.spinner(name='spinner', value='08:30', tabindex='5')
+                                        .inline_50
+                                            span.inline_span По
+                                            input.spinner(name='spinner', value='08:30', tabindex='5')
+                        .form_row_checkbox.form_checkbox_content(tabindex='5')
+                            .row.row_spinner
+                                .col.m5.s12
+                                    input#time2.filled-in(type='checkbox', checked='')
+                                    label(for='time2') Вторник
+                                .col.m7.s12
+                                    .row
+                                        .inline_50
+                                            span.inline_span С
+                                            input.spinner(name='spinner', value='08:30', tabindex='5')
+                                        .inline_50
+                                            span.inline_span По
+                                            input.spinner(name='spinner', value='08:30', tabindex='5')
+                        .form_row_checkbox.form_checkbox_content(tabindex='5')
+                            .row.row_spinner
+                                .col.m5.s12
+                                    input#time3.filled-in(type='checkbox', checked='')
+                                    label(for='time3') Среда
+                                .col.m7.s12
+                                    .row
+                                        .inline_50
+                                            span.inline_span С
+                                            input.spinner(name='spinner', value='08:30', tabindex='5')
+                                        .inline_50
+                                            span.inline_span По
+                                            input.spinner(name='spinner', value='08:30', tabindex='5')
+                        .form_row_checkbox.form_checkbox_content(tabindex='5')
+                            .row.row_spinner
+                                .col.m5.s12
+                                    input#time4.filled-in(type='checkbox', checked='')
+                                    label(for='time4') Четверг
+                                .col.m7.s12
+                                    .row
+                                        .inline_50
+                                            span.inline_span С
+                                            input.spinner(name='spinner', value='08:30', tabindex='5')
+                                        .inline_50
+                                            span.inline_span По
+                                            input.spinner(name='spinner', value='08:30', tabindex='5')
+                        .form_row_checkbox.form_checkbox_content(tabindex='5')
+                            .row.row_spinner
+                                .col.m5.s12
+                                    input#time5.filled-in(type='checkbox', checked='')
+                                    label(for='time5') Пятница
+                                .col.m7.s12
+                                    .row
+                                        .inline_50
+                                            span.inline_span С
+                                            input.spinner(name='spinner', value='08:30', tabindex='5')
+                                        .inline_50
+                                            span.inline_span По
+                                            input.spinner(name='spinner', value='08:30', tabindex='5')
+                        .form_row_checkbox.form_checkbox_content(tabindex='5')
+                            .row.row_spinner
+                                .col.m5.s12
+                                    input#time6.filled-in(type='checkbox', checked='')
+                                    label(for='time6') Суббота
+                                .col.m7.s12
+                                    .row
+                                        .inline_50
+                                            span.inline_span С
+                                            input.spinner(name='spinner', value='08:30', tabindex='5')
+                                        .inline_50
+                                            span.inline_span По
+                                            input.spinner(name='spinner', value='08:30', tabindex='5')
+                        .form_row_checkbox.form_checkbox_content(tabindex='5')
+                            .row.row_spinner
+                                .col.m5.s12
+                                    input#time7.filled-in(type='checkbox', checked='')
+                                    label(for='time7') Воскресенье
+                                .col.m7.s12
+                                    .row
+                                        .inline_50
+                                            span.inline_span С
+                                            input.spinner(name='spinner', value='08:30', tabindex='5')
+                                        .inline_50
+                                            span.inline_span По
+                                            input.spinner(name='spinner', value='08:30', tabindex='5')
+            .form_row
+                .form_row
+                    p.h3 Дополнительные настройки
+                    .form_row_checkbox(tabindex='5')
+                        input#dop1.filled-in(type='checkbox', tabindex='5')
+                        label(for='dop1') Включить геофильтр
+                    .form_row_checkbox(tabindex='5')
+                        input#dop2.filled-in(type='checkbox', tabindex='5')
+                        label(for='dop2') Отправлять клиентам sms с именем менеджера
+                    .form_row_checkbox(tabindex='5')
+                        input#dop3.filled-in(type='checkbox', tabindex='5')
+                        label(for='dop3') Отправлять sms о пропущенном звонке от клиента
+                        .url-block
+                            input.seeend(type='tel', placeholder='+7(___)-___-__-__', tabindex='5')
+                            //span.descrerr Пример ошибки
+                .form_row
+                    p.h3.small_bot Настройки e-mail отчетности
+                    .form_row_checkbox(tabindex='5')
+                        .url-block
+                            label
+                                input.seeend(type='email', placeholder='info@site_name.ru', tabindex='5')
+                                span e-mail для отчетов
+                            //span.descrerr Пример ошибки
+                .form_row.range-row
+                    .form_row_checkbox(tabindex='5')
+                        input#tune1.filled-in(type='checkbox', tabindex='5')
+                        label(for='tune1') Отправлять отчеты о всех совершенных звонках
+                    .form_row_checkbox(tabindex='5')
+                        input#tune2.filled-in(type='checkbox', tabindex='5')
+                        label(for='tune2') Отправлять отчеты только о звонках с оценкой клиента
+                        .raiting
+                            input.val(type='hidden', value='1.75')
+                            input.votes(type='hidden', value='2')
+                        |и ниже
+                    .form_row_checkbox(tabindex='5')
+                        input#tune3.filled-in(type='checkbox', tabindex='5')
+                        label(for='tune3') Отправлять отчеты об общении в чате с оценкой клиента
+                        .raiting
+                            input.val(type='hidden', value='1.75')
+                            input.votes(type='hidden', value='2')
+                        |  и ниже
+                p.h3 Добавить сотрудников в отдел
+                .text-center
+                    .inline-block
+                        p.text-left Выбраны 8 из 9
+                        ul.list-inline.add-emp.add-emp_set
+                            li
+                                .form_row_checkbox(tabindex='5')
+                                    input#emploe1.filled-in(type='checkbox', tabindex='5')
+                                    label(for='emploe1')
+                                        span.img-block
+                                            img.img-circle(src='image/helen.jpg', alt='')
+                                        span Елена
+                            li
+                                .form_row_checkbox(tabindex='5')
+                                    input#emploe2.filled-in(type='checkbox', tabindex='5')
+                                    label(for='emploe2')
+                                        span.img-block
+                                            img.img-circle(src='image/helen.jpg', alt='')
+                                        span Елена
+                            li
+                                .form_row_checkbox(tabindex='5')
+                                    input#emploe3.filled-in(type='checkbox', tabindex='5')
+                                    label(for='emploe3')
+                                        span.img-block
+                                            img.img-circle(src='image/helen.jpg', alt='')
+                                        span Елена
+                            li
+                                .form_row_checkbox(tabindex='5')
+                                    input#emploe4.filled-in(type='checkbox', tabindex='5')
+                                    label(for='emploe4')
+                                        span.img-block
+                                            img.img-circle(src='image/helen.jpg', alt='')
+                                        span Елена
+                            li
+                                .form_row_checkbox(tabindex='5')
+                                    input#emploe5.filled-in(type='checkbox', tabindex='5')
+                                    label(for='emploe5')
+                                        span.img-block
+                                            img.img-circle(src='image/helen.jpg', alt='')
+                                        span Елена
+                            li
+                                .form_row_checkbox(tabindex='5')
+                                    input#emploe6.filled-in(type='checkbox', tabindex='5')
+                                    label(for='emploe6')
+                                        span.img-block
+                                            img.img-circle(src='image/helen.jpg', alt='')
+                                        span Елена
+            a.btn.greenbtn(href='javascript:;', role='button') Сохранить
